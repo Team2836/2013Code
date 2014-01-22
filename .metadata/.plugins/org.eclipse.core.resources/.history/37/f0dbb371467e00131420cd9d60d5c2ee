@@ -1,0 +1,20 @@
+#ifndef POTS_H
+#define POTS_H
+#include "Commands/Subsystem.h"
+#include "WPILib.h"
+
+/**
+ *
+ *
+ * @author rdeast3
+ */
+class Pots: public Subsystem {
+private:
+	// It's desirable that everything possible under private except
+	// for methods that implement subsystem capabilities
+public:
+	Pots();
+	void InitDefaultCommand();
+};
+
+#endif

@@ -1,0 +1,23 @@
+#ifndef POTS_H
+#define POTS_H
+#include "Commands/Subsystem.h"
+#include "WPILib.h"
+//#include "AnalogPotentiometer.h"
+
+/**
+ *
+ *
+ * @author rdeast3
+ */
+class Pots: public Subsystem {
+private:
+	// It's desirable that everything possible under private except
+	// for methods that implement subsystem capabilities
+	AnalogPotentiometer *Pots1;
+public:
+	Pots();
+	void InitDefaultCommand();
+	void PotsMethod();
+};
+
+#endif

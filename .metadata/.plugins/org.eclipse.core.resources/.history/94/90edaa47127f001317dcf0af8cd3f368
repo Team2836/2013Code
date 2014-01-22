@@ -1,0 +1,20 @@
+#include "Pots.h"
+#include "../Robotmap.h"
+
+Pots::Pots() : Subsystem("Pots") {
+	Pots1 = new AnalogPotentiometer(5);
+	
+}
+    
+void Pots::InitDefaultCommand() {
+	// Set the default command for a subsystem here.
+	//SetDefaultCommand(new MySpecialCommand());
+	SetDefaultCommand(new PotsMethod());
+}
+
+void Pots::PotsMethod()
+{
+	Pots1->Get();
+}
+// Put methods for controlling this subsystem
+// here. Call these from Commands.
